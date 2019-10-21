@@ -1,0 +1,25 @@
+{
+  "name": "adresboek",
+  "version": "1.0.0",
+  "description": "address book website with dynamic scripts",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mcblaauw:7473Github!@github.com/mcblaauw/Adresboek.git"
+  },
+  "author": "Marten Blaauw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcblaauw/Adresboek/issues"
+  },
+  "homepage": "https://github.com/mcblaauw/Adresboek#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "faker": "^4.1.0"
+  }
+}
