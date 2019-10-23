@@ -1,4 +1,44 @@
 body {
-	background: orange;
-	color: white;
+	background: orange;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(255, 187, 0, 0.562), rgb(203, 205, 211));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(255, 187, 0, 0.562), rgb(203, 205, 211)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: Roboto;
+	color: Dodgerblue;
+}
+
+div.row {
+	margin-top: 20px;
+}
+
+div.card {
+	border: 5px dotted black;
+	border-radius: 2%;
+}
+
+div.card-header {
+	font-size: 30px;
+	font-family: sans-serif;
+	color: black;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 40px;
+	color: Dodgerblue;
+}
+
+img {
+	max-width: 25%;
+	height: auto;
+}
+
+span#symb_card {
+	font-size: 60px; 
+	color: Dodgerblue;
+}
+
+span#copyright {
+	float: right;
+	font-size: 15px;
+	margin-right: 30px;
 }
