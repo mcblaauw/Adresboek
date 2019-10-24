@@ -10,6 +10,7 @@ mongoose.connect(connectionString,{ useNewUrlParser: true, useUnifiedTopology: t
 });
 
 // FAKER ADDRESS
+/*
 var randomAddress = {
 	name: faker.name.firstName()+" "+faker.name.lastName(),
 	address: faker.address.streetName()+" "+Math.floor(Math.random()*100),
@@ -18,6 +19,7 @@ var randomAddress = {
 	country: "Nederland",
 }; 
 console.log(randomAddress);
+*/
 
 // create new schema blueprint
 const Schema = mongoose.Schema;
@@ -29,25 +31,13 @@ let AddressSchema = new Schema({
     country: {type: String, required: true, max: 100},
 });
 
-//Export the Model
+//Export the Model into the blueprint
+module.exports = mongoose.model('Address', AddressSchema);
+
+/*
 var Address = new mongoose.model("Address", AddressSchema);
 
-// Add data to the Model
-// create() function
-/* TEST CASE 
-Address.create({ 
-    name: "Marten Blaauw",
-    address: "Onnemaheerd 144",
-    zipcode: "9736ATH",
-    city: "Groningen",
-    country: "Nederland", 
-}, function (err, small) {
-    if (err) return handleError(err);
-});
-*/
-
 // add new faker address object to database - collection "test"
-/*
 Address.create(randomAddress, function (err, small) {
     if (err) return handleError(err);
 });

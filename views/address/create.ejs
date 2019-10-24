@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-10">
+			<div class="card">
+				<div class="card-header">Maak nieuw adres aan</div>
+				<div class="card-body">
+                    <form method="POST" action="/address/create">
+                        <div class="form-group">
+                            <label for="name">Naam</label>
+                            <input type="text" class="form-control" id="name" name="address[name]" placeholder="Vul hier uw naam in">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Adres</label>
+                            <input type="text" class="form-control" id="address" name="address[address]" placeholder="Vul hier uw adres in">
+                        </div>
+                        <div class="form-group">
+                            <label for="zipcode">Postcode</label>
+                            <input type="text" maxlength="6" class="form-control" name="address[zipcode]" placeholder="Vul hier uw postcode in">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Stad</label>
+                            <input type="text" class="form-control" id="city" name="address[city]" placeholder="Vul hier uw stad in">
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Land</label>
+                            <input type="text" class="form-control" id="country" name="address[country]" placeholder="Kies hier uw land">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ../partials/footer %>

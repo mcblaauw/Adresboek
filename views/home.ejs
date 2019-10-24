@@ -6,7 +6,8 @@
 			<h1>Look smart, pimp up your address card</h1>
 		</div>
 		<div class="col-md-2 align-self-center text-center">
-			<span id="symb_card"><i class="fas fa-address-card"></i></span>
+			<span id="symb_card"><a href="/address/create"><i class="fas fa-address-card"></i></a></span>
+			<span id="symb_hover">Nieuw adres toevoegen</span>
 		</div>
 	</div>
 
@@ -14,13 +15,16 @@
 		<div class="col-md-10 align-self-center text-center">
 			<div class="card">
 				<div class="card-header">Smart card examples</div>
-				<div class="class-body">
-					<% for (i=0;i<4;i++) { %>
-						<% for (j=0;j<4;j++) { %>
-							<span class="scard">
-								<img src="https://cdn.shopify.com/s/files/1/2683/3718/products/cat-card-greeting-cards_1024x1024.jpg?v=1541718691" alt="cat card example">
-							</span>
-					<% } } %>
+				<div class="card-body">
+					<% for (i=0;i<addresses.length;i++) { %>
+					<div class="visitekaartje">
+						<%= addresses[i].name %><br>
+						<%= addresses[i].address %><br>
+						<%= addresses[i].zipcode %><br>
+						<%= addresses[i].city %><br>
+						<%= addresses[i].country %><br>
+					</div>
+					<% } %>
 				</div>
 			</div>
 		</div>

@@ -21,6 +21,20 @@ div.card-header {
 	color: black;
 }
 
+div.card-body {
+	padding: 10px;
+}
+
+div.visitekaartje {
+	width: 250px;
+	height: 150px;
+	border: 2px solid orange;
+}
+
+div.visitekaartje:hover {
+	background: yellow;
+}
+
 h1 {
 	font-weight: bold;
 	font-size: 40px;
@@ -32,9 +46,23 @@ img {
 	height: auto;
 }
 
-span#symb_card {
+#symb_card {
 	font-size: 60px; 
 	color: Dodgerblue;
+}
+
+#symb_card:hover #symb_hover {
+	visibility: visible;
+}
+
+#symb_hover {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
 }
 
 span#copyright {
