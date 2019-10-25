@@ -5,17 +5,17 @@ const router = express.Router();
 const address_controller = require('../controllers/address.controller');
 //import as functions! to call for different routes
 
-//homepage
+// Homepage
 router.get('/home',address_controller.home);
 // Create address
-router.get('/address/create',address_controller.address_create_ejs)
-router.post('/address/create',address_controller.address_create);
+router.get('/create',address_controller.address_create_ejs)
+router.post('/create',address_controller.address_create);
 // Read address from database
-router.get('/address/:id',address_controller.address_read);
+router.get('/:id',address_controller.address_read);
 // Update existing address from database
-router.put('/address/:id/update',address_controller.address_update);
+router.put('/:id/update',address_controller.address_update);
 // Delete existing address from database
-router.delete('/address/:id/delete',address_controller.address_delete);
+router.get('/:id/delete',address_controller.address_delete);
 
 //test url to check if it works
 router.get('/test',address_controller.test);

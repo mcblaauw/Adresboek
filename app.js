@@ -11,7 +11,7 @@ app.use(express.static("public"));
 // support parsing of application/json type post data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use('/', address); //use '/' root for all subsequent address routes
+app.use('/address/', address); //use '/' root for all subsequent address routes
 
 let port = 3000;
 

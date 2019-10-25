@@ -25,6 +25,7 @@ console.log(randomAddress);
 const Schema = mongoose.Schema;
 let AddressSchema = new Schema({
     name: {type: String, required: true, max: 100},
+    avatar: {type: String, required: true, max: 200},
     address: {type: String, required: true, max: 100},
     zipcode: {type: String, required: true, max: 6},
     city: {type: String, required: true, max: 100},

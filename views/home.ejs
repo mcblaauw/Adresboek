@@ -16,15 +16,31 @@
 			<div class="card">
 				<div class="card-header">Smart card examples</div>
 				<div class="card-body">
-					<% for (i=0;i<addresses.length;i++) { %>
-					<div class="visitekaartje">
-						<%= addresses[i].name %><br>
-						<%= addresses[i].address %><br>
-						<%= addresses[i].zipcode %><br>
-						<%= addresses[i].city %><br>
-						<%= addresses[i].country %><br>
+					<div class="row justify-content-center">
+						<% for (i=0;i<addresses.length;i++) { %>
+						<div class="col-md-6 align-self-center text-center">
+							<div class="acard-frame">
+								<div class="acard-photo">
+									<img style="max-width: 100%;" src="<%= addresses[i].avatar %>" alt="cat demo">
+								</div>
+								<div class="acard-text">
+									<%= addresses[i].name %><br>
+									<%= addresses[i].address %><br>
+									<%= addresses[i].zipcode %><br>
+									<%= addresses[i].city %><br>
+									<%= addresses[i].country %><br>
+								</div>
+								<div class="acard-buttons">
+									<a href="/address/<%= addresses[i]._id %>/delete">
+										<button class="btn btn-outline-danger">
+											DELETE
+										</button>
+									</a>
+								</div>
+							</div>
+						</div>
+						<% } %>
 					</div>
-					<% } %>
 				</div>
 			</div>
 		</div>
