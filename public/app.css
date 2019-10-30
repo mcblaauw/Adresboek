@@ -7,13 +7,14 @@ body {
 }
 
 div.card {
-	border: 5px dotted black;
+	border: 5px double Dodgerblue;
 	border-radius: 2%;
 }
 
 div.card-header {
 	font-size: 30px;
 	font-family: sans-serif;
+	font-weight: bold;
 	color: black;
 }
 
@@ -22,20 +23,27 @@ div.card-body {
 }
 
 div.acard-frame {
-	width: 100%;
-	height: 0;
-	padding-top: 67%;
+	width: 340px;
+	height: 227px;
 	margin: 10px auto 10px auto;
 	position: relative;
 	border: 2px solid orange;
+	border-radius: 3%;
 }
 
 div.acard-frame:hover {
 	background: rgb(255, 225, 169);
 }
 
-div.acard-text {
-	text: color;
+div.acard-frame:hover img{
+	opacity: 0.2;
+}
+
+div.acard-frame:hover .acard-onhover {
+	opacity: 1.0;
+}
+
+div.acard-text {	
 	position: absolute;
 	top: 20%;
 	left: 55%;
@@ -49,10 +57,19 @@ div.acard-photo {
 	height: 150px;
 }
 
-div.acard-buttons {
-	position: absolute;
-	top: 87%;
-	left: 80%;
+div.acard-onhover {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+div.acard-form {
+	display: none;
 }
 
 h1 {
@@ -66,27 +83,50 @@ img {
 	height: auto;
 }
 
-#symb_card {
+div.acard-form .form-group {
+	display: inline-block;
+	max-width: 100%;
+	text-align: left;
+}​
+
+.symb_card {
+	position: relative;
+	display: inline-block;
 	font-size: 60px; 
 	color: Dodgerblue;
 }
 
-#symb_card:hover #symb_hover {
-	visibility: visible;
+.symb_card .symb_hover {
+	visibility: hidden;
+	width: 180px;
+	color: black;
+	text-align: center;
+	background-color: dodgerblue;
+	border: 1.5px solid black;
+	border-radius: 10%;
+	/* Position the tooltip */
+	position: absolute;
+	top: 10%;
+	left: 100%;
+	z-index: -1; 
 }
 
-#symb_hover {
-	visibility: hidden;
-	width: 120px;
-	background-color: black;
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 5px 0;
+.symb_card:hover .symb_hover {
+	visibility: visible;
 }
 
 span#copyright {
 	float: right;
 	font-size: 15px;
 	margin-right: 30px;
+}
+
+.fa-home {
+	font-size: 140%;
+	float: left;
+}
+
+.fa-address-card {
+	float: right;
+	font-size: 250%;
 }

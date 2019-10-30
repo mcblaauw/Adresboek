@@ -13,7 +13,7 @@ router.post('/create',address_controller.address_create);
 // Read address from database
 router.get('/:id',address_controller.address_read);
 // Update existing address from database
-router.put('/:id/update',address_controller.address_update);
+router.post('/:id/update',address_controller.address_update);
 // Delete existing address from database
 router.get('/:id/delete',address_controller.address_delete);
 

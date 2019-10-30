@@ -1,0 +1,59 @@
+<% include ../partials/header %>
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-10 align-self-center text-center">
+			<div class="card">
+				<div class="card-header"><a href="/address/home"><i class="fas fa-home"></i></a>Edit your SmartCard</div>
+				<div class="card-body">
+                    <div class="acard-frame">
+                        <div class="acard-photo">
+                            <img style="max-width: 100%;" src="<%= addresses.avatar %>" alt="avatar">
+                        </div>
+                        <div class="acard-text">
+                            <%= addresses.name %><br>
+                            <%= addresses.address %><br>
+                            <%= addresses.zipcode %><br>
+                            <%= addresses.city %><br>
+                            <%= addresses.country %><br>
+                        </div>              
+                    </div>
+                    <hr>
+                    <div class="acard-form"> 
+                        <form method="POST" action="/address/<%= addresses._id %>/update">
+                            <input type="hidden" id="id" name="address[_id]" value=<%= addresses._id %>>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="address[name]" value="<%= addresses.name %>">
+                            </div> 
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" name="address[address]" value="<%= addresses.address %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="zipcode">Zipcode</label>
+                                <input type="text" maxlength="6" class="form-control" name="address[zipcode]" value="<%= addresses.zipcode %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" name="address[city]" value="<%= addresses.city %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" class="form-control" id="country" name="address[country]" value="<%= addresses.country %>">
+                            </div>
+                            <input type="hidden" id="avatar" name="address[avatar]" value="<%= addresses.avatar %>">
+                            <br>
+                            <button type="submit" class="btn btn-primary">Submit changes</button>
+                        </form>    
+                        <hr>
+                    </div>    
+                    <button id="aupdate" class="btn btn-primary">Edit</button>
+                    <button id="adelete" class="btn btn-danger" onclick="location.href='/address/<%= addresses._id %>/delete'">Remove</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ../partials/footer %>

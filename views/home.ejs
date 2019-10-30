@@ -6,8 +6,10 @@
 			<h1>Look smart, pimp up your address card</h1>
 		</div>
 		<div class="col-md-2 align-self-center text-center">
-			<span id="symb_card"><a href="/address/create"><i class="fas fa-address-card"></i></a></span>
-			<span id="symb_hover">Nieuw adres toevoegen</span>
+			<div class="symb_card">
+				<a href="/address/create"><i class="fas fa-address-card"></i></a>
+				<span class="symb_hover">Add new SmartCard</span>
+			</div>
 		</div>
 	</div>
 
@@ -21,7 +23,7 @@
 						<div class="col-md-6 align-self-center text-center">
 							<div class="acard-frame">
 								<div class="acard-photo">
-									<img style="max-width: 100%;" src="<%= addresses[i].avatar %>" alt="cat demo">
+									<img style="max-width: 100%;" src="<%= addresses[i].avatar %>" alt="avatar">
 								</div>
 								<div class="acard-text">
 									<%= addresses[i].name %><br>
@@ -30,13 +32,7 @@
 									<%= addresses[i].city %><br>
 									<%= addresses[i].country %><br>
 								</div>
-								<div class="acard-buttons">
-									<a href="/address/<%= addresses[i]._id %>/delete">
-										<button class="btn btn-outline-danger">
-											DELETE
-										</button>
-									</a>
-								</div>
+								<div class="acard-onhover"><button class="btn btn-primary" onclick="location.href='/address/<%= addresses[i]._id %>'">Edit</button></div>
 							</div>
 						</div>
 						<% } %>
