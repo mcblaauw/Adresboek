@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/mcblaauw/Adresboek#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "ejs": "^2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "faker": "^4.1.0",
     "mongodb": "^3.3.3",
     "mongoose": "^5.7.6",
